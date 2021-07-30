@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
-import Route from "./Router";
-import "./index.css";
+import Route from "./router";
+import "./index.scss";
 import { I18nextProvider } from "react-i18next";
 import i18next from "i18next";
 import tr from "./translations/tr.json";

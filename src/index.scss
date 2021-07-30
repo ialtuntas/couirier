@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin ipadpro {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  font-family: "Montserrat", sans-serif;
+  transition-duration: 0.4s;
+  &:hover {
+    transition: all 0.8s;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+body {
+  background: #fafafa;
+}
+.container {
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+// header
+
+.header {
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  display: flex;
+  margin: 0 auto;
+  @include tablet {
+    justify-content: space-between;
+  }
+  .logo {
+    width: 258px;
+    // min-width: 258px;
+    padding: 25px 54px 24.6px 55px;
+    @include mobile {
+      display: none;
+    }
+  }
+  .logosmall {
+    padding: 27px;
+    display: none;
+    @include mobile {
+      display: block;
+    }
+  }
+  .list {
+    @include tablet {
+      display: none;
+    }
+    flex: 1;
+    padding: 31px 0 31px 0;
+    ul {
+      display: flex;
+      margin-top: auto;
+      margin-bottom: auto;
+      @include ipadpro {
+        margin-left: 0px;
+      }
+      margin-left: 50px;
+      li {
+        cursor: pointer;
+        @include ipadpro {
+          padding-right: 10px;
+        }
+        padding-right: 30px;
+        a {
+          color: #464646;
+          font-size: 14px;
+          line-height: 18px;
+          font-weight: 400;
+          &:hover {
+            color: #025fbf;
+          }
+        }
+        &.active {
+          a {
+            color: #025fbf;
+          }
+        }
+      }
+    }
+  }
+  .usertools {
+    @include mobile {
+      width: auto;
+      min-width: auto;
+    }
+    width: 300px;
+    min-width: 300px;
+    padding: 31px 0 31px 0;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+
+    .flag {
+      width: 67px;
+      height: 32px;
+      border-radius: 10px;
+      border: 1px solid #fafafa;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 7px;
+      cursor: pointer;
+    }
+    .notfy {
+      padding: 32px 6px 30.2px 12.8px;
+      cursor: pointer;
+    }
+    .usersettings {
+      width: 194px;
+      height: 50px;
+      border-radius: 10px;
+      border: 1px solid #fafafa;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 15px 8px 15px;
+      cursor: pointer;
+
+      span {
+        color: #061624;
+        font-size: 14px;
+        line-height: 34px;
+        opacity: 0.7;
+      }
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+}
+//sidebar
+
+.ant-input {
+  background-color: rgba(2, 95, 191, 0.1);
+  border-radius: 10px;
+  color: rgba(6, 22, 36, 0.5);
+  width: 238px;
+  height: 44px;
+  border: none;
+  font-size: 12px;
+}
+.sidebar {
+  width: 258px;
+  .ant-drawer-body {
+    .logo {
+      width: 258px;
+      // min-width: 258px;
+      padding: 25px 54px 24.6px 55px;
+    }
+  }
+  .search {
+    margin-left: 10px;
+    position: relative;
+    svg {
+      position: absolute;
+      top: 16px;
+      left: 212px;
+      height: 13px;
+      width: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(6, 22, 36, 0.5);
+    }
+  }
+}

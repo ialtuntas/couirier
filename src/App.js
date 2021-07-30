@@ -1,11 +1,15 @@
 import "./App.css";
 import { Button } from "antd";
+import Layout from "./components/layout/layout";
 
 function App() {
   return (
-    <div className="App">
-      <Button type={"primary"}>Save</Button>
-    </div>
+    <Layout>
+      aaaaaaa
+      <div className="App">
+        <Button type={"primary"}>Save</Button>
+      </div>
+    </Layout>
   );
 }
 
