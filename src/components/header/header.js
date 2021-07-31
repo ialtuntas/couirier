@@ -36,9 +36,7 @@ function Header() {
         <div className="notfy">
           <Notfy></Notfy>
         </div>
-        <div className="usersettings">
-          <UserSettings></UserSettings>
-        </div>
+        <UserSettings></UserSettings>
       </div>
     </div>
   );

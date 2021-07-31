@@ -79,18 +79,32 @@ const Sidebar = () => {
 
           <Input placeholder="Search" />
         </div>
+
         <List
-          //   header={<div>Header</div>}
+          header={
+            <Typography.Text
+              style={{
+                color: "#025FBF",
+                fontSize: "12px",
+                display: "block",
+                textAlign: "center",
+              }}
+            >
+              Courier Name
+            </Typography.Text>
+          }
           //   footer={<div>Footer</div>}
           dataSource={data}
           renderItem={(item) => (
             <List.Item
               style={{
-                width: "171px",
-                paddingLeft: "12px",
+                width: "258px",
+                // paddingLeft: "12px",
+                justifyContent: "center",
+                fontSize: "14px",
               }}
             >
-              <Typography.Text
+              {/* <Typography.Text
                 style={{
                   textAlign: "left",
                   color: "#061624",
@@ -98,10 +112,10 @@ const Sidebar = () => {
                 }}
               >
                 1
-              </Typography.Text>
+              </Typography.Text> */}
+
               <Typography.Text
                 style={{
-                  textAlign: "center",
                   color: "#061624",
                   opacity: ".7",
                 }}

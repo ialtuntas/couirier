@@ -1,4 +1,4 @@
-import { Dropdown, List, Avatar } from "antd";
+import { Dropdown, List, Avatar, Image } from "antd";
 import avataradres from "../../svg/avatar.svg";
 import bottomarrow from "../../svg/bottomarrow.svg";
 
@@ -21,8 +21,10 @@ const menu = (
   <List
     style={{
       padding: "10px 30px 0px 20px",
-      width: "350px",
+      width: "300px",
       borderRadius: "10px",
+      height: "150px",
+      overflowX: "auto",
     }}
     itemLayout="horizontal"
     dataSource={data}
@@ -43,19 +45,18 @@ const menu = (
 const userSettings = () => {
   return (
     <>
-      <img src={avataradres} className="borderavatar" alt="logo" />
-
-      {/* <Avatar
-          shape="square"
-          size={34}
-          src={
-            <Image width={34} height={34} src="https://panel.poshta.ua/uploads/avatars/system-user/8f62a8fb648412ab8fe498d7ced5f48b.jpeg" />
-          }
-        /> */}
-      <span>Carter Center</span>
-
       <Dropdown overlay={menu} placement="bottomRight">
-        <img src={bottomarrow} className="bottomarrow" alt="logo" />
+        <div>
+          <div className="usersettingsmobile">
+            <img src={avataradres} className="borderavatar" alt="logo" />
+          </div>
+
+          <div className="usersettings">
+            <img src={avataradres} className="borderavatar" alt="logo" />
+            <span>Carter Center</span>
+            <img src={bottomarrow} className="bottomarrow" alt="logo" />
+          </div>
+        </div>
       </Dropdown>
     </>
   );
