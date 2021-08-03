@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Avatar from "../svg/avatar.svg";
 import TableArrow from "../svg/tablearrow.svg";
 import ThreeDot from "../svg/threedot.svg";
@@ -39,8 +40,11 @@ const Table = () => {
               <td>
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <img src={Avatar} />
-
-                  <span style={{ marginLeft: "10px" }}>Alyona Bondarenko</span>
+                  <Link to="/couirierlist">
+                    <span style={{ marginLeft: "10px" }}>
+                      Alyona Bondarenko
+                    </span>
+                  </Link>
                 </div>
               </td>
               <td>

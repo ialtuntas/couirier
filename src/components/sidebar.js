@@ -1,13 +1,24 @@
 import sidebarsvg from "../svg/sidebar.svg";
-import { Drawer, Input, List, Typography } from "antd";
+import { Button, Card, Drawer, Input, List, Typography } from "antd";
 import { useState } from "react";
 import Logo from "../svg/logo.svg";
 
 const Sidebar = () => {
+  const [visible2, setVisible2] = useState(false);
+
+  const showDrawer2 = () => {
+    setVisible2(true);
+    setVisible(false);
+  };
+
+  const onClose2 = () => {
+    setVisible2(false);
+  };
   const [visible, setVisible] = useState(false);
 
   const showDrawer = () => {
     setVisible(true);
+    setVisible2(false);
   };
 
   const onClose = () => {
@@ -40,6 +51,7 @@ const Sidebar = () => {
         getContainer={false}
         style={{
           position: "absolute",
+          zIndex: 100000,
         }}
         width={258}
         bodyStyle={{ padding: 0, background: "#fff" }}
