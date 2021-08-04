@@ -44,7 +44,13 @@ const menu = (
 const notfy = () => {
   return (
     <Badge offset={[-2, 1]} dot>
-      <Dropdown overlay={menu} placement="bottomCenter">
+      <Dropdown
+        overlayStyle={{
+          zIndex: 100000000,
+        }}
+        overlay={menu}
+        placement="bottomCenter"
+      >
         <img src={bell} alt="bell" />
       </Dropdown>
     </Badge>

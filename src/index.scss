@@ -23,6 +23,9 @@
   box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
   font-family: "Montserrat", sans-serif;
+  a {
+    color: #061624;
+  }
   // transition-duration: 0.4s;
   // &:hover {
   //   transition: all 0.8s;
@@ -115,7 +118,7 @@ body {
     padding: 31px 0 31px 0;
     display: flex;
     align-items: center;
-    margin-right: 30px;
+    // margin-right: 30px;
 
     .flag {
       width: 67px;
@@ -160,7 +163,8 @@ body {
         border-radius: 10px;
         border: 1px solid #fafafa;
         cursor: pointer;
-        padding: 8px 0px 8px 15px;
+        padding: 8px 15px 8px 15px;
+        margin-left: 10px;
       }
     }
   }
@@ -303,6 +307,9 @@ body {
   justify-content: flex-end;
 
   .paginatebtn {
+    a {
+      color: white;
+    }
     @include mobile {
       min-width: 30px;
       height: 30px;
@@ -605,5 +612,13 @@ body {
   }
   .ant-card-bordered {
     border: 0;
+  }
+}
+
+.ant-dropdown-menu-item {
+  &:hover {
+    background-color: #025fbf;
+    color: white;
+    border-radius: 10px;
   }
 }

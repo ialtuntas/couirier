@@ -1,5 +1,11 @@
 {
     "welcome": {
-        "title": "Willkommen bei {{framework}}"
-    }
+        "title": "Hoşgeldin {{framework}}",
+        "home": "Ana Sayfa"
+
+    },
+    "Müşteri İşlemleri": "Müşteri İşlemleri",
+    "Şube İşlemleri": "Şube İşlemleri",
+    "Kargo İşlemleri":"Kargo İşlemleri",
+    "Kariyer Listesi":"Kariyer Listesi"
 }

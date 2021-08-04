@@ -67,7 +67,7 @@ const Sidebar = () => {
         visible={visible}
         getContainer={false}
         style={{
-          position: "absolute",
+          // position: "absolute",
           zIndex: 100000,
         }}
         width={258}
@@ -163,7 +163,6 @@ const Sidebar = () => {
         visible={visible2}
         getContainer={false}
         style={{
-          position: "absolute",
           top: "120px",
           height: "80vh",
           zIndex: 100000,

@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+
 import { BrowserRouter } from "react-router-dom";
 import Route from "./router";
 import "./index.scss";
@@ -27,16 +28,14 @@ i18next.init({
     },
   },
 });
-i18next.init({
-  interpolation: { escapeValue: false },
-});
+
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <I18nextProvider i18n={i18next}>
-        <Route component={Route} />
-      </I18nextProvider>
-    </BrowserRouter>
-  </React.StrictMode>,
+  // <React.StrictMode>
+  <BrowserRouter>
+    <I18nextProvider i18n={i18next}>
+      <Route component={Route} />
+    </I18nextProvider>
+  </BrowserRouter>,
+  // </React.StrictMode>,
   document.getElementById("root")
 );

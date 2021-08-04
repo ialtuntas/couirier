@@ -1,5 +1,7 @@
 {
     "welcome": {
-        "title": "Willkommen bei {{framework}}"
+        "title": "Rusça {{framework}}",
+        "home": "Ru Page"
+
     }
 }

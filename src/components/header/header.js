@@ -3,8 +3,11 @@ import LogoSmall from "../../svg/logosmall.svg";
 import Notfy from "./notfy";
 import UserSettings from "./userSettings";
 import LangChanger from "./langChanger";
+import { useTranslation } from "react-i18next";
 
 function Header() {
+  const [t, i18n] = useTranslation("common");
+
   return (
     <div className="header">
       <div className="logo">
@@ -16,23 +19,21 @@ function Header() {
       <div className="list">
         <ul>
           <li className="active">
-            <a href="#">Ana Sayfa</a>
+            <a href="#">{t("welcome.home")}</a>
           </li>
           <li>
-            <a href="#">Müşteri İşlemleri</a>
+            <a href="#">{t("Müşteri İşlemleri")}</a>
           </li>
           <li>
-            <a href="#">Şube İşlemleri</a>
+            <a href="#">{t("Şube İşlemleri")}</a>
           </li>
           <li>
-            <a href="#">Kargo İşlemleri</a>
+            <a href="#">{t("Kargo İşlemleri")}</a>
           </li>
         </ul>
       </div>
       <div className="usertools">
-        <div className="flag">
-          <LangChanger />
-        </div>
+        <LangChanger />
         <div className="notfy">
           <Notfy></Notfy>
         </div>

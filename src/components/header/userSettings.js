@@ -1,51 +1,29 @@
-import { Dropdown, List, Avatar, Image } from "antd";
+import { Dropdown, List, Avatar, Image, Menu } from "antd";
 import avataradres from "../../svg/avatar.svg";
 import bottomarrow from "../../svg/bottomarrow.svg";
 
-const data = [
-  {
-    title: "Ant Design Title 1",
-  },
-  {
-    title: "Ant Design Title 2",
-  },
-  {
-    title: "Ant Design Title 3",
-  },
-  {
-    title: "Ant Design Title 4",
-  },
-];
-
 const menu = (
-  <List
+  <Menu
     style={{
-      padding: "10px 30px 0px 20px",
-      width: "300px",
+      padding: "5px",
       borderRadius: "10px",
-      height: "150px",
-      overflowX: "auto",
     }}
-    itemLayout="horizontal"
-    dataSource={data}
-    renderItem={(item) => (
-      <List.Item>
-        <List.Item.Meta
-          avatar={
-            <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-          }
-          title={<a href="https://ant.design">{item.title}</a>}
-          description="Ant Design, a design language for background applications, is refined by Ant UED Team"
-        />
-      </List.Item>
-    )}
-  />
+  >
+    <Menu.Item>1st menu item</Menu.Item>
+    <Menu.Item>a danger item</Menu.Item>
+  </Menu>
 );
 
 const userSettings = () => {
   return (
     <>
-      <Dropdown overlay={menu} placement="bottomRight">
+      <Dropdown
+        overlayStyle={{
+          zIndex: 100000000,
+        }}
+        overlay={menu}
+        placement="bottomRight"
+      >
         <div>
           <div className="usersettingsmobile">
             <img src={avataradres} className="borderavatar" alt="logo" />
