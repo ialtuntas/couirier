@@ -149,7 +149,7 @@ body {
       span {
         color: #061624;
         font-size: 14px;
-        line-height: 34px;
+        // line-height: 34px;
         opacity: 0.7;
       }
       @include mobile {
@@ -186,7 +186,13 @@ body {
   border: none;
   font-size: 12px;
 }
+
 .sidebar {
+  .mobiledisplay {
+    @include mobile {
+      display: block !important;
+    }
+  }
   // width: 258px;
   height: 0;
   .ant-drawer-body {
@@ -474,6 +480,52 @@ body {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
+  @include mobile {
+    margin-top: 50px;
+  }
+  @include ipadpro {
+    margin-top: 50px;
+  }
+  .leaflet-container {
+    @include mobile {
+      height: 300px !important;
+    }
+  }
+  .maptop {
+    display: flex;
+    justify-content: space-between;
+
+    .mobilhidden {
+      @include mobile {
+        display: none;
+      }
+    }
+    .ant-select-arrow {
+      margin-top: -13px;
+      @include mobile {
+        margin-top: -12px;
+      }
+    }
+    .ant-select-selection-placeholder {
+      line-height: 39px;
+    }
+    .ant-select-selection-item {
+      line-height: 39px;
+    }
+    .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+      height: 39px;
+      border-radius: 10px;
+      @include mobile {
+        margin-bottom: 10px;
+      }
+    }
+    .ant-select {
+      @include mobile {
+        width: 100% !important;
+        margin-left: 0 !important;
+      }
+    }
+  }
 }
 
 .map2 {
@@ -592,7 +644,7 @@ body {
 
 .ant-drawer-body {
   table {
-    table-layout: fixed;
+    // table-layout: fixed;
     width: 100%;
   }
   td span {

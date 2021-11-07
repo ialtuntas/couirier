@@ -5,6 +5,7 @@ import CoffeeCup from "../svg/coffee-cup.svg";
 import Ellipse from "../svg/ellipse.svg";
 import Speedometer from "../svg/speedometer.svg";
 import Speedometer2 from "../svg/speedometer2.svg";
+import { useTranslation } from "react-i18next";
 const route = [
   {
     latitude: "50.408263",
@@ -65,6 +66,8 @@ const a = res[1].split(":");
 const b = a[0] * 60 * 0.615 + parseInt(a[1]) + 375;
 // console.log(b);
 const Timeline = () => {
+  const [t, i18n] = useTranslation("common");
+
   return (
     <div className="map2">
       <div className="time">
@@ -161,8 +164,8 @@ const Timeline = () => {
         <table>
           <tbody>
             <tr>
-              <th className="textalignleft">Driver</th>
-              <th className="textalignleft">Time</th>
+              <th className="textalignleft">{t("Sürücü")}</th>
+              <th className="textalignleft">{t("Süre")}</th>
               <th>
                 <span>09:00</span>
               </th>

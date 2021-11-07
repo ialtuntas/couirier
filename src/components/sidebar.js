@@ -24,13 +24,13 @@ const Sidebar = () => {
   const onClose = () => {
     setVisible(false);
   };
-  const data = [
-    "Çağrı Sevgi",
-    "Çağrı Sevgi",
-    "Çağrı Sevgi",
-    "Çağrı Sevgi",
-    "Çağrı Sevgi",
+  const data2 = [
+    "Ana Sayfa",
+    "Müşteri İşlemleri",
+    "Şube İşlemleri",
+    "Kargo İşlemleri",
   ];
+  const data = ["Çağrı Sevgi", "Çağrı Sevgi", "Çağrı Sevgi", "Çağrı Sevgi"];
   return (
     <div className="sidebar">
       <img
@@ -107,6 +107,43 @@ const Sidebar = () => {
           }
           //   footer={<div>Footer</div>}
           dataSource={data}
+          renderItem={(item) => (
+            <List.Item
+              style={{
+                width: "258px",
+                // paddingLeft: "12px",
+                justifyContent: "center",
+                fontSize: "14px",
+              }}
+            >
+              {/* <Typography.Text
+                style={{
+                  textAlign: "left",
+                  color: "#061624",
+                  opacity: ".7",
+                }}
+              >
+                1
+              </Typography.Text> */}
+
+              <Typography.Text
+                style={{
+                  color: "#061624",
+                  opacity: ".7",
+                }}
+              >
+                {item}
+              </Typography.Text>
+            </List.Item>
+          )}
+        />
+        <List
+          className="mobiledisplay"
+          style={{
+            display: "none",
+          }}
+          //   footer={<div>Footer</div>}
+          dataSource={data2}
           renderItem={(item) => (
             <List.Item
               style={{

@@ -2,8 +2,11 @@ import sidebarsvg from "../svg/sidebar.svg";
 import { Button, Card, Drawer, Input, List, Typography } from "antd";
 import { useState } from "react";
 import Logo from "../svg/logo.svg";
+import { useTranslation } from "react-i18next";
 
 const Sidebar = () => {
+  const [t, i18n] = useTranslation("common");
+
   const [visible2, setVisible2] = useState(false);
 
   const showDrawer2 = () => {
@@ -37,6 +40,8 @@ const Sidebar = () => {
         style={{
           transition: "all .3s",
           marginTop: "-18px",
+          position: "absolute",
+          zIndex: 10,
           marginLeft: visible ? "245px" : "-13px",
         }}
         onClick={visible ? onClose : showDrawer}
@@ -52,12 +57,13 @@ const Sidebar = () => {
             borderRadius: "10px",
             border: 0,
             marginBottom: "15px",
+            marginRight: "10px",
             fontSize: "16px",
             height: "39px",
           }}
           onClick={visible2 ? onClose2 : showDrawer2}
         >
-          Tüm Kargolar
+          {t("Tüm Kargolar")}
         </Button>
       </div>
       <Drawer
@@ -106,7 +112,7 @@ const Sidebar = () => {
             </g>
           </svg>
 
-          <Input placeholder="Search" />
+          <Input placeholder={t("Ara")} />
         </div>
 
         <List
@@ -119,7 +125,7 @@ const Sidebar = () => {
                 textAlign: "center",
               }}
             >
-              Courier Name
+              {t("Kariyer İsmi")}
             </Typography.Text>
           }
           //   footer={<div>Footer</div>}

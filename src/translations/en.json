@@ -1,11 +1,22 @@
 {
     "welcome": {
-        "title": "Welcome to {{framework}}",
-        "home": "Home Page"
+        "title": "Hoşgeldin {{framework}}",
+        "home": "en Ana Sayfa"
+
     },
-    "Müşteri İşlemleri": "Müşteri2",
+    "Müşteri İşlemleri": "en Müşteri İşlemleri",
     "Şube İşlemleri": "en Şube İşlemleri",
     "Kargo İşlemleri":"en Kargo İşlemleri",
-    "Kariyer Listesi":"Courier List"
+    "Kariyer Listesi":"en Kariyer Listesi",
+    "Kariyer İsmi":"en Kariyer İsmi",
+    "Bölge":"en Bölge",
+    "Kilogram":"en Kilogram",
+    "Desi":"en Desi",
 
+    "Kariyer Lokasyonları":"en Kariyer Lokasyonları",
+    "Sürücü":"en Sürücü",
+    "Süre":"en Süre",
+    "Tüm Kargolar":"en Tüm Kargolar",
+    "Ara":"en Ara",
+    "Tarih Seçiniz":"en Tarih Seçiniz"
 }

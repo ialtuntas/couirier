@@ -31,9 +31,9 @@ const Table = () => {
     setDataTable([]);
     setSpin(true);
     axios
-      .get("/branch/couriers/60?page=" + data.page, {
+      .get("/branch/couriers/64?page=" + data.page, {
         headers: {
-          Authorization: "Bearer 6446|zC6p9o4seaadjCz2V7lmXYbz90NXpEiNbFdlvD9e",
+          Authorization: "6555|KGmqBYlQDvwB4UoedmuIPNQOUmItCSd9nZAd7iej",
         },
       })
       .then((response) => {
@@ -68,26 +68,28 @@ const Table = () => {
     <>
       <div className="componenttable">
         <table>
-          <caption>{t("Kariyer Listesi")}</caption>
+          <caption>
+            <Link to="/couirierlist">{t("Kariyer Listesi")}</Link>
+          </caption>
           <thead>
             <tr>
               <th style={{ width: "60px" }}>
                 <span>#</span>
               </th>
               <th style={{ width: "353px" }}>
-                <span>Courier Name</span>
+                <span>{t("Kariyer İsmi")}</span>
                 <img src={TableArrow} />
               </th>
               <th style={{ width: "180px" }}>
-                <span>Bölge</span>
+                <span>{t("Bölge")}</span>
                 <img src={TableArrow} />
               </th>
               <th style={{ width: "163px" }}>
-                <span>Kilogram</span>
+                <span>{t("Kilogram")}</span>
                 <img src={TableArrow} />
               </th>
               <th style={{ width: "311px" }}>
-                <span>Desi</span>
+                <span>{t("Desi")}</span>
                 <img src={TableArrow} />
               </th>
             </tr>

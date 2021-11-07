@@ -14,7 +14,10 @@ import iconShadow from "leaflet/dist/images/marker-shadow.png";
 import "leaflet/dist/leaflet.css";
 import { useEffect, useRef } from "react";
 import { Button } from "antd";
+import { useTranslation } from "react-i18next";
+import { Select } from "antd";
 
+const { Option } = Select;
 const route = [
   {
     latitude: "50.408263",
@@ -509,7 +512,7 @@ let DefaultIcon = L.icon({
 });
 
 L.Marker.prototype.options.icon = DefaultIcon;
-const position = [50.419206, 30.547853];
+const position = [50.408214, 30.554299];
 const position2 = [50.408221, 30.554487];
 const polyline = [
   [50.45389736980437, 30.50577163696289],
@@ -524,7 +527,7 @@ const polyline = [
 const limeOptions = { color: "#025fbf", weight: 8 };
 
 const Map = () => {
-  const mapRef = useRef(null);
+  const [t, i18n] = useTranslation("common");
 
   useEffect(() => {
     // mapRef.current = L.popup().openPopup(mapRef.current);
@@ -532,21 +535,41 @@ const Map = () => {
 
   return (
     <div className="map">
-      <Button
-        type="primary"
-        style={{
-          transition: "all .3s",
-          position: "relative",
-          background: "#025fbf",
-          borderRadius: "10px",
-          border: 0,
-          marginBottom: "15px",
-          fontSize: "16px",
-          height: "39px",
-        }}
-      >
-        Courier Locations
-      </Button>
+      <div className="maptop">
+        <Button
+          className="mobilhidden"
+          type="primary"
+          style={{
+            transition: "all .3s",
+            position: "relative",
+            background: "#025fbf",
+            borderRadius: "10px",
+            border: 0,
+            marginBottom: "15px",
+            fontSize: "16px",
+            height: "39px",
+          }}
+        >
+          {t("Kariyer Lokasyonları")}
+        </Button>
+        <Select
+          // defaultValue="lucy"
+          placeholder={t("Tarih Seçiniz")}
+          style={{
+            width: "73%",
+            marginLeft: "20px",
+          }}
+          // onChange={handleChange}
+        >
+          <Option value="jack">07/08/2021</Option>
+          <Option value="lucy">07/08/2021</Option>
+          <Option value="disabled" disabled>
+            07/08/2021
+          </Option>
+          <Option value="Yiminghe">yiminghe</Option>
+        </Select>
+      </div>
+
       <MapContainer
         center={position}
         zoom={14}
@@ -554,7 +577,7 @@ const Map = () => {
         scrollWheelZoom={true}
       >
         <TileLayer
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          attribution='&copy; <a href="http://poshta.ua">Poshta</a>'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {route2
